@@ -1,8 +1,8 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+#girisButonu:hover{
+    border-radius: 10px;
+    background-color: orange ;
 }
-
-a {
-  color: #00B7FF;
+#navButtons:hover{
+    border-radius: 10px;
+    background-color: aqua ;
 }

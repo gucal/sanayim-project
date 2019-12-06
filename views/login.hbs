@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="stylesheets/form.css" type="text/css">
+
+<body>
+  <div class="container login-container mt-5">
+    <div class="row">
+      {{!-- GIRIS YAP CARD --}}
+      <div class="col-md-4" id="girisYap">
+        <form class="form-container">
+          <h3>Giriş Yap</h3>
+          <div class="form-group pt-4">
+            <label for="girisEposta" class="pl-1">E-posta Adresiniz</label>
+            <input id="girisEposta" type="text" class="form-control" placeholder="E-posta" value="" />
+          </div>
+          <div class="form-group pt-2">
+            <label for="girisSifre" class="pl-1">Şifreniz</label>
+            <input type="password" id="girisSifre" class="form-control" placeholder="Şifre" value="" />
+          </div>
+          <div class="form-group pt-2">
+            <input type="submit" class="btn btn-primary btn-block" value="Giriş Yap" />
+          </div>
+          <div class="form-group pt-2">
+            <a href="#" class="ForgetPwd">Şifremi Unuttum</a>
+          </div>
+        </form>
+      </div>
+
+      {{!-- KAYIT OL CARD --}}
+      <div class="col-md-5" id="kayitOl">
+        <form class="form-container">
+          <h3 class="text-dark">Kayıt Ol</h3>
+          <div class="form-group">
+            <label class="pt-4 pl-1" for="ePosta">E-mail</label>
+            <input type="text" id="ePosta" class="form-control" placeholder="" value="" />
+          </div>
+          <div class="form-group ">
+            <label class="pt-1 pl-1" for="ePosta">E-mail</label>
+            <input type="text" class="form-control" placeholder="" value="" />
+          </div>
+          <div class="form-group">
+            <label class="pt-1 pl-1" for="ePosta">E-mail</label>
+            <input type="text" class="form-control" placeholder="" value="" />
+          </div>
+          <div class="form-group">
+            <label class="pt-1 pl-1" for="ePosta">E-mail</label>
+            <input type="text" class="form-control" placeholder="" value="" />
+          </div>
+          <div class="form-group">
+            <label class="pt-1 pl-1" for="ePosta">E-mail</label>
+            <input type="text" class="form-control" placeholder="" value="" />
+          </div>
+          <div class="form-group pt-1">
+            <label class="pt-1 pl-1" for="ePosta">E-mail</label>
+            <input type="password" class="form-control" placeholder="" value="" />
+          </div>
+          <div class="form-group pt-3">
+            <input type="submit" class="btn btn-primary btn-block" value="Kayıt Ol" />
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+
+</html>
