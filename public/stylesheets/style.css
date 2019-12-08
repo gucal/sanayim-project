@@ -4,7 +4,7 @@
 }
 #navButtons:hover{
     border-radius: 10px;
-    background-color: aqua ;
+    background-color: aqua ;;
 }
 body{
     background: url('/images/factory-wallpaper-3.jpg') no-repeat center center fixed;
