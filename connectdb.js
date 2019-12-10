@@ -8,7 +8,7 @@ let connection = mysql.createConnection({
 })
 
 /* ID BOLUMU SUREKLI OLARAK *NULL* KALMALIDIR */
-// let sqlSorgusu = `INSERT INTO kullanicilar VALUES('8','abdurrahimbalta@outlook.com','12613','Abdurrahim BALTA','BMW','Otomobil','İstanbul');`
+let sqlSorgusu = `INSERT INTO kullanicilar VALUES(NULL,'abdurrahimbalta@outlook.com','12613','Abdurrahim BALTA','BMW','Otomobil','İstanbul');`
 
 
 connection.connect(function (err) {
