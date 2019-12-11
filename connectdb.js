@@ -15,7 +15,7 @@ connection.connect(function (err) {
     if (err) throw err;
     connection.query(sqlSorgusu, function (err, result) {
         if (err) throw err.message;
-        console.log('Kulllanıcı başarılı bir şekilde eklendi');
+        console.log('Kullanıcı başarılı bir şekilde eklendi');
     });
     connection.end(function (err) {
         if (err) throw err;

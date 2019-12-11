@@ -33,31 +33,31 @@
 
       {{!-- KAYIT OL CARD --}}
       <div class="col-md-5" id="kayitOl">
-        <form id="userForm" class="form-container">
+        <form method="POST" action="/submitForm" id="userForm" class="form-container">
           <h3 class="text-dark">Kayıt Ol</h3>
           <div class="form-group">
             <label class="pt-4 pl-1" for="ePosta">İsim Soyisim:</label>
-            <input type="text" id="adSoyad" class="form-control" placeholder="" value="" />
+            <input name="adSoyad" type="text" id="adSoyad" class="form-control" placeholder="" value="" />
           </div>
           <div class="form-group ">
             <label class="pt-1 pl-1" for="ePosta">E-posta Adresiniz:</label>
-            <input type="text" class="form-control" placeholder="" value="" />
+            <input name="ePosta" type="text" class="form-control" placeholder="" value="" />
           </div>
           <div class="form-group">
             <label class="pt-1 pl-1" for="ePosta">Şifre:</label>
-            <input type="password" class="form-control" placeholder="" value="" />
+            <input name="password" type="password" class="form-control" placeholder="" value="" />
           </div>
           <div class="form-group">
             <label class="pt-1 pl-1" for="ePosta">Marka Adınız:</label>
-            <input type="text" class="form-control" placeholder="" value="" />
+            <input name="markaAd" type="text" class="form-control" placeholder="" value="" />
           </div>
           <div class="form-group">
             <label class="pt-1 pl-1" for="ePosta">Sektör Seçiniz:</label>
-            <input type="text" class="form-control" placeholder="" value="" />
+            <input name="sektorAd" type="text" class="form-control" placeholder="" value="" />
           </div>
           <div class="form-group pt-1">
             <label class="pt-1 pl-1" for="inputState">Şehir Seçiniz:</label>
-            <select id="inputState" class="form-control">
+            <select name="sehir" id="inputState" class="form-control">
                 <option value="0">Şehir Seçiniz...</option>
                 <option value="1">Adana</option>
                 <option value="2">Adıyaman</option>

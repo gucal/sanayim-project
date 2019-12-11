@@ -3,6 +3,20 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+// var mysql = require('mysql');
+
+// let connection = mysql.createConnection({
+//   host: 'localhost',
+//   user: 'root',
+//   password: 'password',
+//   database: 'sanayim'
+// })
+
+// connection.connect(function(err){
+//   if (err) throw err;
+//   console.log('DB ON');
+// })
+
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -26,6 +40,14 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/giris', loginRouter);
 app.use('/urun', addProductRouter);
+
+// app.post('/submitForm',function(req,res){
+//   let sqlSorgusu = "INSERT INTO kullanicilar VALUES(NULL,'"+req.body.adSoyad+"','"+req.body.ePosta+"','"+req.body.password+"','"+req.body.markaAd+"','"+req.body.sektorAd+"','"+req.body.sehir+"')"
+//   connection.query(sqlSorgusu,function(err){
+//     if (err) throw err;
+//     console.log('BAŞARILI BİR ŞEKİLDE KULLANICI EKLENDİ');
+//   })
+// })
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
