@@ -7,7 +7,7 @@ var connection = mysql.createConnection(dbconfig.connection);
 
 
 router.post('/', function (req, res) {
-    let sqlSorgusu = "INSERT INTO kullanicilar VALUES(NULL,'" + req.body.adSoyad + "','" + req.body.ePosta + "','" + req.body.password + "','" + req.body.markaAd + "','" + req.body.sektorAd + "','" + req.body.sehir + "')"
+    let sqlSorgusu = "INSERT INTO kullanicilar VALUES(NULL,'" + req.body.ePosta + "','" + req.body.password + "','" + req.body.adSoyad + "','" + req.body.markaAd + "','" + req.body.sektorAd + "','" + req.body.sehir + "')"
     connection.query(sqlSorgusu, function (err) {
         if (err) throw err;
         console.log('BAŞARILI BİR ŞEKİLDE KULLANICI EKLENDİ');
