@@ -8,23 +8,23 @@
 </head>
 
 <body>
-    <form class="form-container" id="urunEkleForm">
+    <form action="/addProd" method="POST" class="form-container" id="urunEkleForm">
         <h3 class="pl-3">Ürün Ekle</h3>
         <div class="form-group pt-3 ml-3 mr-3">
             <label for="formGroupExampleInput">Ürün Adını Giriniz:</label>
-            <input type="text" class="form-control" id="formGroupExampleInput">
+            <input name="urunAd" type="text" class="form-control" id="formGroupExampleInput">
         </div>
         <div class="form-group ml-3 mr-3">
             <label for="formGroupExampleInput2">Eklediğiniz Ürünün Fiyatı:</label>
-            <input type="number" class="form-control" id="formGroupExampleInput2">
+            <input name="urunFiyat" type="number" class="form-control" id="formGroupExampleInput2">
         </div>
         <div class="form-group ml-3 mr-3">
             <label for="formGroupExampleInput">Kategori Adı:</label>
-            <input type="text" class="form-control" id="formGroupExampleInput">
+            <input name="kategoriAd" type="text" class="form-control" id="formGroupExampleInput">
         </div>
         <div class="form-group ml-3 mr-3">
             <label for="formGroupExampleInput2">Üretim Durumu:</label>
-            <select id="inputState" class="form-control">
+            <select name="uretimDurum" id="inputState" class="form-control">
                 <option value="0">Seçiniz...</option>
                 <option value="1">Üretildi</option>
                 <option value="0">İstek doğrultusunda üretim.</option>
@@ -32,17 +32,17 @@
         </div>
         <div class="form-group ml-3 mr-3">
             <label for="formGroupExampleInput">Ürün Bilgileri Giriniz:</label>
-            <textarea  type="text" class="form-control" id="formGroupExampleInput"></textarea>
+            <textarea name="urunBilgi" type="text" class="form-control" id="formGroupExampleInput"></textarea>
         </div>
-        
+
         <div class="form-group ml-3 mr-3">
             <label for="formGroupExampleInput">Stok Sayısı:</label>
-            <input type="number" class="form-control" id="formGroupExampleInput">
+            <input name="stokSayisi" type="number" class="form-control" id="formGroupExampleInput">
         </div>
 
         <div class="form-group ml-3 mr-3">
             <label for="formGroupExampleInput2">Şehir Giriniz:</label>
-             <select id="inputState" class="form-control">
+            <select name="sehirAdi" id="inputState" class="form-control">
                 <option value="0">Şehir Seçiniz...</option>
                 <option value="1">Adana</option>
                 <option value="2">Adıyaman</option>
@@ -125,10 +125,10 @@
                 <option value="79">Kilis</option>
                 <option value="80">Osmaniye</option>
                 <option value="81">Düzce</option>
-              </select>
+            </select>
         </div>
         <div class="form-group ml-3 mr-3">
-            <input type="file" id="urunGorselEkle" class="btn btn-dark" id="formGroupExampleInput">
+            <input name="gorselEklenen" type="file" id="urunGorselEkle" class="btn btn-dark" id="formGroupExampleInput">
         </div>
         <div class="form-group pt-4 ml-3 mr-3">
             <input type="submit" value="Ürün Ekle" class="btn btn-primary btn-block">
