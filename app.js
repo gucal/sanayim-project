@@ -10,6 +10,7 @@ var loginRouter = require('./routes/login');
 var addProductRouter = require('./routes/addProduct');
 var submit = require('./routes/submit');
 var addProd = require('./routes/addProd');
+var auth = require('./routes/auth')
 
 var app = express();
 
@@ -28,6 +29,7 @@ app.use('/giris', loginRouter);
 app.use('/addProd', addProd);
 app.use('/urun', addProductRouter);
 app.use('/submitForm', submit);
+app.use('/auth', auth);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

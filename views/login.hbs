@@ -12,15 +12,15 @@
     <div class="row">
       {{!-- GIRIS YAP CARD --}}
       <div class="col-md-4" id="girisYap">
-        <form class="form-container">
+        <form method="POST" action="/auth" class="form-container">
           <h3>Üye Girişi</h3>
           <div class="form-group pt-4">
             <label for="girisEposta" class="pl-1">E-posta Adresiniz</label>
-            <input id="girisEposta" type="text" class="form-control" placeholder="E-posta" value="" />
+            <input name="username" id="girisEposta" type="text" class="form-control" placeholder="E-posta" value="" />
           </div>
           <div class="form-group pt-2">
             <label for="girisSifre" class="pl-1">Şifreniz</label>
-            <input type="password" id="girisSifre" class="form-control" placeholder="Şifre" value="" />
+            <input name="password" type="password" id="girisSifre" class="form-control" placeholder="Şifre" value="" />
           </div>
           <div class="form-group pt-2">
             <input type="submit" class="btn btn-primary btn-block" value="Giriş Yap" />
