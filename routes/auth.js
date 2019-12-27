@@ -20,20 +20,21 @@ router.post('/', function (req, res) {
 
   if (username && password) {
     connection.query("SELECT * FROM kullanicilar WHERE kullaniciEposta = ?  AND kullaniciSifre  = ?", [username, password], function (error, results, fields) {
-
-      console.log(results); // SONUÇ  GELİYOR DOĞRU KONTROL YAPILIRSA ÇALIŞACAK
-      if (results.lenght > 0) {
+      console.log(results);
+      if (results.length > 0) {
         req.session.loggedin = true;
         req.session.username = username;
         console.log('GİRİŞ BAŞARILI');
+        res.render('index');
       } else {
         console.log('GİRİŞ BAŞARISIZ')
-        res.render('index');
+        res.render('login');
       }
     })
   }
   else {
     console.log('BOŞ BIRAKILAMAZ');
+    res.render('login');
   }
 }
 )
