@@ -1,52 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-</head>
+<div id="div" class="row">
+</div>
+<input type="hidden" name="" id="asdga" value="{{{urunler.urunID}}}">
+<input type="hidden" name="" id="asdga2" value="{{{urunler.urunAdi}}}">
+<input type="hidden" name="" id="asdga3" value="{{{urunler.urunResmi}}}">
+<input type="hidden" name="" id="asdga4" value="{{{urunler.urunFiyati}}}">
 
 
-<body>
-  <div id="div" class="row">
-  </div>
-  <input type="hidden" name="" id="asdga" value="{{{urunler.urunID}}}">
-  <input type="hidden" name="" id="asdga2" value="{{{urunler.urunAdi}}}">
-  <input type="hidden" name="" id="asdga3" value="{{{urunler.urunResmi}}}">
-  <input type="hidden" name="" id="asdga4" value="{{{urunler.urunID}}}">
-  <input type="hidden" name="" id="asdga5" value="{{{urunler.urunID}}}">
-  <input type="hidden" name="" id="asdga6" value="{{{urunler.urunID}}}">
-  <input type="hidden" name="" id="asdga7" value="{{{urunler.urunID}}}">
+<script>
 
-  <script>
+  function getProduct(urunLength) {
+    let content = "";
 
-    function getProduct(urunLength) {
-      let content = "";
-
-      let deneme = document.getElementById('div');
-      let asdga = document.getElementById('asdga').value;
-      let asdga2 = document.getElementById('asdga2').value;
-      let asdga3 = document.getElementById('asdga3').value;
+    let deneme = document.getElementById('div');
+    let asdga = document.getElementById('asdga').value;
+    let asdga2 = document.getElementById('asdga2').value; //URUN ADI
+    let asdga3 = document.getElementById('asdga3').value; //RESIM
+    let asdga4 = document.getElementById('asdga4').value; //FIYAT
 
 
 
-      let arr = asdga.split(',');
-      let arr2 = asdga2.split(',');
-      let arr3 = asdga3.split(',');
-      console.log(arr3);
+    let arr = asdga.split(',');
+    let arr2 = asdga2.split(',');
+    let arr3 = asdga3.split(',');
+    let arr4 = asdga4.split(',');
 
-      for (let i = 0; i < urunLength; i++) {
-        content = '<div style="text-align:center" class="card ml-3 mr-3"><img src = "../images/' + arr3[i] + '" alt = "Avatar" style = "width: 100 % "><div class="container"><h4 id="ad"><b>' + arr[i] + '</b></h4><p>' + arr2[i] + '</p></div></div>';
-        deneme.innerHTML += content;
 
-      }
+    for (let i = 0; i < urunLength; i++) {
+      content = '<div style="text-align:center" class="card ml-3 mr-3"><a href="/detail/' + arr[i] + '"/><img src = "../images/' + arr3[i] + '" alt = "Avatar" style = "width: 100 % "><div class="container"><h4 id="ad"><b>' + arr2[i] + '</b></h4><p>' + "Fiyatı: " + arr4[i] + " TL" + '<p>' + '</div></div>';
+      deneme.innerHTML += content;
 
-      console.log(urunLength);
     }
-    window.onload = getProduct({{{ urunIdLength }}})
 
-  </script>
-</body>
+    console.log(urunLength);
+  }
+  window.onload = getProduct({{{ urunIdLength }}})
 
-</html>
+</script>

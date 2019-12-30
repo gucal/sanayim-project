@@ -1,0 +1,45 @@
+<div class="card border mb-2 container">
+  <div style="font-size: x-large;" class="card-header mt-3">Ürün Detayları</div>
+  <div class="card-body">
+    <h2 class="card-title mb-3">{{{urunAdi}}}</h2>
+    <p style="font-size: large;" class="card-text">
+      Fiyat: {{{urunFiyati}}} TL
+    </p>
+    <p style="font-size: large;" class="card-text mb-3">
+      Kategori: {{{kategoriAdi}}}
+    </p>
+    <p style="font-size: large;" class="card-text mb-3">
+      Üretim Durumu: {{{uretimDurumu}}}
+    </p>
+    <p style="font-size: large;" class="card-text mb-3">
+      Ürün Detayları: {{{urunDetaylari}}}
+    </p>
+    <p style="font-size: large;" class="card-text mb-3">
+      Stok Sayısı: {{{stokSayisi}}}
+    </p>
+  </div>
+  <div class="card-footer"> Haritada Görüntüle </div>
+  <style>
+    #map {
+      height: 600px;
+      width: 100%;
+    }
+  </style>
+  <div id="map"></div>
+
+  <script>
+    function initMap() {
+      var options = {
+        zoom: 14,
+        center: { lat: 38.61202, lng: 27.42647 }
+      }
+
+      var map = new google.maps.Map(document.getElementById('map'), options);
+    }
+
+  </script>
+
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDz0cHDaq86hNmoqY9Mg1DB-tsTjPs5EnY&callback=initMap"
+    type="text/javascript"></script>
+</div>
