@@ -25,7 +25,7 @@ router.post('/', function (req, res) {
         req.session.loggedin = true;
         req.session.username = username;
         console.log('GİRİŞ BAŞARILI');
-        res.render('index');
+        res.redirect('/');
       } else {
         console.log('GİRİŞ BAŞARISIZ')
         res.render('login');

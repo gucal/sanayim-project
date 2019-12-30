@@ -7,7 +7,7 @@ var connection = mysql.createConnection(dbconfig.connection);
 
 
 
-router.get('/detail/:id', function (req, res) {
+router.get('/details/:id', function (req, res) {
   var veriCekmeSorgusu = connection.query('SELECT * FROM urunlistesi  HAVING id=' + req.params.id);
   veriCekmeSorgusu.on('result', function (row) {
     var urunID = row['id'];
