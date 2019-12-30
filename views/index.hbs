@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+
+<body>
+  {{#each urunler}} <p style="color:white">{{{this}}}</p> {{/each}}
+
+  <div class="row">
+    <div class="card col">
+      <img src="../images/vida.jpg" alt="Avatar" style="width:100%">
+      <div class="container">
+        <h4 id="ad"><b>{{{urunler.urunAdi}}}</b></h4>
+        <p>{{{urunler.urunDetaylari}}}</p>
+      </div>
+    </div>
+    <div class="card col">
+      <img src="../images/vida.jpg" alt="Avatar" style="width:100%">
+      <div class="container">
+        <h4><b>Arg</b></h4>
+        <p>Architect & Engineer</p>
+      </div>
+    </div>
+    <div class="card col">
+      <img src="../images/vida.jpg" alt="Avatar" style="width:100%">
+      <div class="container">
+        <h4><b>John Doe</b></h4>
+        <p>Architect & Engineer</p>
+      </div>
+    </div>
+    <div class="card col">
+      <img src="../images/vida.jpg" alt="Avatar" style="width:100%">
+      <div class="container">
+        <h4><b>John Doe</b></h4>
+        <p>Architect & Engineer</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
