@@ -7,39 +7,46 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
 
-<body>
-  {{#each urunler}} <p style="color:white">{{{this}}}</p> {{/each}}
 
-  <div class="row">
-    <div class="card col">
-      <img src="../images/vida.jpg" alt="Avatar" style="width:100%">
-      <div class="container">
-        <h4 id="ad"><b>{{{urunler.urunAdi}}}</b></h4>
-        <p>{{{urunler.urunDetaylari}}}</p>
-      </div>
-    </div>
-    <div class="card col">
-      <img src="../images/vida.jpg" alt="Avatar" style="width:100%">
-      <div class="container">
-        <h4><b>Arg</b></h4>
-        <p>Architect & Engineer</p>
-      </div>
-    </div>
-    <div class="card col">
-      <img src="../images/vida.jpg" alt="Avatar" style="width:100%">
-      <div class="container">
-        <h4><b>John Doe</b></h4>
-        <p>Architect & Engineer</p>
-      </div>
-    </div>
-    <div class="card col">
-      <img src="../images/vida.jpg" alt="Avatar" style="width:100%">
-      <div class="container">
-        <h4><b>John Doe</b></h4>
-        <p>Architect & Engineer</p>
-      </div>
-    </div>
+<body>
+  <div id="div" class="row">
   </div>
+  <input type="hidden" name="" id="asdga" value="{{{urunler.urunID}}}">
+  <input type="hidden" name="" id="asdga2" value="{{{urunler.urunAdi}}}">
+  <input type="hidden" name="" id="asdga3" value="{{{urunler.urunResmi}}}">
+  <input type="hidden" name="" id="asdga4" value="{{{urunler.urunID}}}">
+  <input type="hidden" name="" id="asdga5" value="{{{urunler.urunID}}}">
+  <input type="hidden" name="" id="asdga6" value="{{{urunler.urunID}}}">
+  <input type="hidden" name="" id="asdga7" value="{{{urunler.urunID}}}">
+
+  <script>
+
+    function getProduct(urunLength) {
+      let content = "";
+
+      let deneme = document.getElementById('div');
+      let asdga = document.getElementById('asdga').value;
+      let asdga2 = document.getElementById('asdga2').value;
+      let asdga3 = document.getElementById('asdga3').value;
+
+
+
+      let arr = asdga.split(',');
+      let arr2 = asdga2.split(',');
+      let arr3 = asdga3.split(',');
+      console.log(arr3);
+
+      for (let i = 0; i < urunLength; i++) {
+        content = '<div style="text-align:center" class="card ml-3 mr-3"><img src = "../images/' + arr3[i] + '" alt = "Avatar" style = "width: 100 % "><div class="container"><h4 id="ad"><b>' + arr[i] + '</b></h4><p>' + arr2[i] + '</p></div></div>';
+        deneme.innerHTML += content;
+
+      }
+
+      console.log(urunLength);
+    }
+    window.onload = getProduct({{{ urunIdLength }}})
+
+  </script>
 </body>
 
 </html>
