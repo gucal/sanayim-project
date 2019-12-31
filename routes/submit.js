@@ -11,7 +11,7 @@ router.post('/', function (req, res) {
     connection.query(sqlSorgusu, function (err) {
         if (err) throw err;
         console.log('BAŞARILI BİR ŞEKİLDE KULLANICI EKLENDİ');
-        res.render('index', {title:'Sanayim - 81 İl, Yüzlerce Yatırımcı, Binlerce Üretici'});
+        res.render('index', { title: 'Sanayim - 81 İl, Yüzlerce Yatırımcı, Binlerce Üretici' });
     })
 })
 module.exports = router;
